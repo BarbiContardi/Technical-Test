@@ -20,7 +20,6 @@ In this project, we utilized a micro-frontends architecture using Module Federat
 To set up the project locally, clone the repository and install the necessary dependencies.
 
 git clone https://github.com/BarbiContardi/Technical-Test 
-cd my-app 
 npm install
 
 ## Development
