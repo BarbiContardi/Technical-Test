@@ -7,10 +7,10 @@ const ComponentA: React.FC = () => {
 
   return (
     <div>
-      <h2>Random Data</h2>
+      <h1 className='text-lg font-bold mb-2'>RANDOM YEAR DATA</h1>
       {loading && <p>Loading...</p>}
       {error && <p>Error..</p>}
-      <h1>{data?.text}</h1>
+      <p>{data?.text}</p>
     </div>
   );
 };

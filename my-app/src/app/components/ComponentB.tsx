@@ -1,19 +1,25 @@
-import React from 'react';
-import useDataFetching from '../hooks/useDataFetching';
+import React from "react";
+import useDataFetching from "../hooks/useDataFetching";
 
 const ComponentB: React.FC = () => {
-  const { data, loading, error } = useDataFetching('https://pokeapi.co/api/v2/ability/?limit=5&offset=5');
-
+  const { data, loading, error } = useDataFetching(
+    "https://pokeapi.co/api/v2/ability/?limit=5&offset=5"
+  );
+  const abilityList = data?.results?.map((ability: any) => ability.name) || [];
   return (
     <div>
-      <h2>Pokeapi</h2>
+      <h1 className="text-lg font-bold mb-2">POKEAPI NAME LIST:</h1>
       {loading && <p>Loading...</p>}
       {error && <p>Error..</p>}
-      <h1>{data?.url}</h1>
-      {/* arreglar esta data */}
+      {data && (
+        <ul className="text-center">
+          {abilityList.map((abilityName: string, index: number) => (
+            <li key={index}>{abilityName}</li>
+          ))}
+        </ul>
+      )}
     </div>
   );
 };
-
 
 export default ComponentB;
