@@ -12,13 +12,9 @@ const Home: React.FC = () => {
           Dashboard
         </h1>
         <DynamicPanel />
-        <div className="flex flex-row justify-center gap-10">
-          <div className="flex flex-col text-center w-40">
-            <ComponentA />
-          </div>
-          <div>
-            <ComponentB />
-          </div>
+        <div className="flex flex-row justify-center gap-10 mt-8">
+          <ComponentA />
+          <ComponentB />
         </div>
       </div>
     </div>
