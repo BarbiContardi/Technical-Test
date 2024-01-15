@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { memo } from 'react';
 import useDataFetching from '../hooks/useDataFetching';
 
+const API_URL = "https://api.chucknorris.io/jokes/random";
+
 const ComponentA: React.FC = () => {
-  const { data, loading, error } = useDataFetching("https://api.chucknorris.io/jokes/random");
+  const { data, loading, error } = useDataFetching(API_URL);
 
   return (
     <div className='flex flex-col text-center border-4 border-white w-60'>
@@ -14,5 +16,4 @@ const ComponentA: React.FC = () => {
   );
 };
 
-
-export default ComponentA;
+export default memo(ComponentA);
