@@ -63,7 +63,7 @@ export const DynamicPanel: React.FC = () => {
           isPanelVisible ? "opacity-100 h-auto" : "opacity-0 h-0"
         }`}
       >
-        <canvas id="myChart" width={500} height={250}></canvas>
+        <canvas id="myChart" className="w-1/2 sm:w-full lg:w-full" width={500} height={250}></canvas>
       </div>
     </div>
   );
