@@ -16,6 +16,11 @@ const Home: React.FC = () => {
           <ComponentA />
           <ComponentB />
         </div>
+        <div className="flex flex-col items-center mt-8">
+          <button className="bg-blue-500 text-white px-4 py-2 rounded-md mb-4 transition duration-300 ease-out">
+            <a href="/emogipage">Emoji World</a>
+          </button>
+        </div>
       </div>
     </div>
   );
