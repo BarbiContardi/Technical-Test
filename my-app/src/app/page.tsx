@@ -3,7 +3,8 @@ import React from "react";
 import { DynamicPanel } from "./components/DynamicPanel";
 import ComponentA from "./components/ComponentA";
 import ComponentB from "./components/ComponentB";
-import DocumentEditor from "./serverpage/DocumentEditor";
+import Button from "./components/Button";
+
 
 const Home: React.FC = () => {
   return (
@@ -17,12 +18,9 @@ const Home: React.FC = () => {
           <ComponentA />
           <ComponentB />
         </div>
-        <div className="flex flex-col items-center mt-8">
-          <button className="bg-blue-500 text-white px-4 py-2 rounded-md mb-4 transition duration-300 ease-out">
-            <a href="/emogipage">Emoji World</a>
-          </button>
-        </div>
-        <DocumentEditor/>
+        {/* <div className="flex flex-col items-center mt-8">
+
+        </div> */}
       </div>
     </div>
   );
