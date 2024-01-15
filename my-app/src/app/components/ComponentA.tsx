@@ -9,7 +9,7 @@ const ComponentA: React.FC = () => {
       <h1 className='text-lg font-bold mb-2'>CHUCK NORRIS FACTS</h1>
       {loading && <p>Loading...</p>}
       {error && <p>Error..</p>}
-      <p>{data?.value}</p>
+      <p className='pl-4 pr-4'>{data?.value}</p>
     </div>
   );
 };
