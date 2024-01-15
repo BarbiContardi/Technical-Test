@@ -8,7 +8,7 @@ const DocumentEditor: React.FC = () => {
     setDocument(newDocument);
   }, []);
 
-  const socket = useSocket('http://localhost:3000', {
+  const socket = useSocket('https://technical-test-ten-omega.vercel.app/', {
     documentChange: handleDocumentChange,
   });
 
