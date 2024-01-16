@@ -1,29 +1,27 @@
-import { MdSupervisedUserCircle } from "react-icons/md";
-import styles from "./card.module.css";
+import { MdSupervisedUserCircle } from 'react-icons/md';
 
-interface Item {
-    path: string;
-    icon: React.ReactNode;
+interface CardProps {
+  item: {
     title: string;
-    change: number;
     number: number;
-  }
+    change: number;
+  };
+}
 
-  interface CardProps {
-    item: Item;
-  }
-
-  const Card: React.FC<CardProps> = ({ item }) => {
+const Card: React.FC<CardProps> = ({ item }) => {
+    if (!item) {
+        return <div>Error: No se proporcionó un elemento.</div>;
+      }
   return (
-    <div className={styles.container}>
+    <div className="bg-[var(--bg)] p-5 rounded-lg flex space-x-5 cursor-pointer w-full hover:bg-[#2e374a]">
       <MdSupervisedUserCircle size={24} />
-      <div className={styles.texts}>
-        <span className={styles.title}>{item.title}</span>
-        <span className={styles.number}>{item.number}</span>
-        <span className={styles.detail}>
-          <span className={item.change > 0 ? styles.positive : styles.negative}>
+      <div className="flex flex-col space-y-5">
+        <span>{item.title}</span>
+        <span className="text-6xl font-semibold">{item.number}</span>
+        <span className="text-base font-light">
+          <span className={item.change > 0 ? 'text-lime-500' : 'text-red-500'}>
             {item.change}%
-          </span>{" "}
+          </span>{' '}
           {item.change > 0 ? "more" : "less"} than previous week
         </span>
       </div>

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import MenuLink from "./menuLink/MenuLink";
-import styles from "./sidebar.module.css";
+
 import {
   MdDashboard,
   MdSupervisedUserCircle,
