@@ -3,9 +3,9 @@ import Image from "next/image";
 import * as React from "react";
 import type { NextPage } from "next";
 import emojisData from "../data/emojis";
-import List from "../components/List";
-import CategoryCard from "../components/CategoryCard";
-import Pagination from "../components/Pagination";
+import List from "../ui/List";
+import CategoryCard from "../ui/CategoryCard";
+import Pagination from "../ui/Pagination";
 
 const Home2: React.FC = () => {
   const [currentSearch, setCurrentSearch] = React.useState("");
