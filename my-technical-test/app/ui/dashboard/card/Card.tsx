@@ -9,9 +9,6 @@ interface CardProps {
 }
 
 const Card: React.FC<CardProps> = ({ item }) => {
-    if (!item) {
-        return <div>Error: No se proporcionó un elemento.</div>;
-      }
   return (
     <div className="bg-[var(--bgSoft)] p-5 rounded-lg flex space-x-5 cursor-pointer w-full hover:bg-[#2e374a]">
       <MdSupervisedUserCircle size={24} />

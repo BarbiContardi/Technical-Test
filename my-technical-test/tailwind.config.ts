@@ -15,7 +15,7 @@ const config: Config = {
       },
       borderRadius: {
         'large': '10px',
-        'sm' : '2px'
+        'sm' : '2px',
       },
     },
   },
