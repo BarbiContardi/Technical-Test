@@ -14,7 +14,7 @@ const Navbar = () => {
     <div className='p-5 rounded-lg bg-[var(--bgSoft)] flex items-center justify-between'>
       <div className='text-[var(--textSoft)] font-bold capitalize'>{pathname.split("/").pop()}</div>
       <div className='flex items-center gap-5'>
-        <div className='flex items-center space-x-2.5 bg-[#2e374a] p-2.5 rounded-lg'>
+        <div className='flex items-center space-x-2.5 bg-[#2e374a] p-2.5 rounded-lg w-max'>
           <MdSearch />
           <input type="text" placeholder="Search..." className='bg-transparent border-0 text-[var(--text)]' />
         </div>

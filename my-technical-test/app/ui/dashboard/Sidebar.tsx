@@ -1,5 +1,5 @@
 import Image from "next/image";
-import MenuLink from "./menuLink/MenuLink";
+import MenuLink from "./MenuLink";
 
 import {
   MdDashboard,

@@ -1,8 +1,8 @@
 import React from "react";
-import Card from "../ui/dashboard/card/Card";
-import Transactions from "../ui/dashboard/transactions/Transactions";
-import Rightbar from "../ui/dashboard/rightbar/Rightbar";
-import Chart from "../ui/dashboard/chart/Chart";
+import Card from "../ui/dashboard/Card";
+import Transactions from "../ui/dashboard/Transactions";
+import Rightbar from "../ui/dashboard/Rightbar";
+import Chart from "../ui/dashboard/Chart";
 import {cards} from '../lib/data'
 
 const Dashboard = () => {
