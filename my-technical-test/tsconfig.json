@@ -30,6 +30,7 @@
     "app/lib/actions.js",
     "app/authconfig.js",
     "app/auth.js",
+
   ],
   "exclude": ["node_modules"]
 }
