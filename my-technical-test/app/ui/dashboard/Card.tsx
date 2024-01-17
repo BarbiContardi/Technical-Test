@@ -1,4 +1,5 @@
 import { MdSupervisedUserCircle } from 'react-icons/md';
+import React from 'react';
 
 interface CardProps {
   item: {

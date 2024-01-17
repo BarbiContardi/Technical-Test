@@ -17,6 +17,9 @@ const config: Config = {
         'large': '10px',
         'sm' : '2px',
       },
+      colors:{
+        customColor:'#2e374a'
+      }
     },
   },
   plugins: [],

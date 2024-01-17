@@ -9,9 +9,9 @@ const LoginForm = () => {
   return (
     <form action={formAction} className='bg-[var(--bgSoft)] p-[50px] rounded-large w-[500px] h-[500px] flex flex-col items-center justify-center gap-[30px]'>
       <h1>Login</h1>
-      <input type="text" placeholder="username" name="username" className="w-full p-[30px] border-solid border-2 border-[#2e374a] rounded-[5px] bg-[var(--bg)] text-[var(--text)]" />
-      <input type="password" placeholder="password" name="password" className="w-full p-[30px] border-solid border-2 border-[#2e374a] rounded-[5px] bg-[var(--bg)] text-[var(--text)]" />
-      <button className="w-100 p-[30px] bg-teal-300 text-[var(--text)] border-0 cursor-pointer rounded-[5px]">Login</button>
+      <input type="text" placeholder="username" name="username" className="w-full p-[30px] border-2 border-customColor rounded-[5px] bg-[var(--bg)] text-[var(--text)]" />
+      <input type="password" placeholder="password" name="password" className="w-full p-[30px] border-2 border-customColor rounded-[5px] bg-[var(--bg)] text-[var(--text)]" />
+      <button className="w-full p-[30px] bg-teal-300 text-[var(--text)] border-0 cursor-pointer rounded-[5px]">Login</button>
       {state && state}
     </form>
   );

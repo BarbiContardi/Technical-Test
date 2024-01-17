@@ -1,6 +1,6 @@
-// import { deleteUser } from "@/app/lib/actions";
+import { deleteUser } from "@/app/lib/actions";
 import { fetchUsers } from "@/app/lib/data";
-// import Pagination from "@/app/ui/dashboard/pagination/pagination";
+import Pagination from "@/app/ui/dashboard/Pagination";
 import Search from "@/app/ui/dashboard/Search"
 import Image from "next/image";
 import Link from "next/link";
@@ -23,7 +23,7 @@ interface SearchParams {
 const UsersPage = async ({ searchParams }: { searchParams: SearchParams }) => {
   const q = searchParams?.q || "";
   const page = searchParams?.page || 1;
-  const { count, users }: { count: number, users: User[] } = await fetchUsers(q, page);
+  const { count, users }: { count: any, users: User[] } = await fetchUsers(q, page);
 
   return (
     <div className='bg-[var(--bgSoft)] p-5 rounded-large mt-5'>
@@ -66,23 +66,23 @@ const UsersPage = async ({ searchParams }: { searchParams: SearchParams }) => {
               <td className='p-2.5'>
                 <div className='flex gap-2.5'>
                   <Link href={`/dashboard/users/${user.id}`}>
-                    <button className='pr-2.5 pt-[5px] text-[var(--text)] border-0 cursor-pointer bg-teal-300'>
+                    <button className='px-2.5 py-[5px] text-[var(--text)] border-0 cursor-pointer bg-teal-300'>
                       View
                     </button>
                   </Link>
-                  {/* <form action={deleteUser}>
+                  <form action={deleteUser}>
                     <input type="hidden" name="id" value={(user.id)} />
-                    <button className='pr-2.5 pt-[5px] text-[var(--text)] border-0 cursor-pointer bg-[#D0114F]'>
+                    <button className='px-2.5 py-[5px] text-[var(--text)] border-0 cursor-pointer bg-[#D0114F]'>
                       Delete
                     </button>
-                  </form> */}
+                  </form>
                 </div>
               </td>
             </tr>
           ))}
         </tbody>
       </table>
-      {/*<Pagination count={count} />*/}
+      <Pagination onClick={count} isDisabled={false}/>
     </div>
   );
 };

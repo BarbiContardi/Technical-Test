@@ -1,10 +1,9 @@
 import Search from "@/app/ui/dashboard/Search";
 import Image from "next/image";
 import Link from "next/link";
-import styles from "@/app/ui/dashboard/products/products.module.css";
 import { fetchProducts } from "@/app/lib/data";
 import { deleteProduct } from "@/app/lib/actions";
-// import Pagination from "@/app/ui/dashboard/pagination/pagination";
+import Pagination from "@/app/ui/dashboard/Pagination";
 
 interface SearchParams {
   q?: string;
@@ -60,13 +59,13 @@ const ProductPage = async ({
               <td className='p-2.5'>
                 <div className='flex gap-2.5'>
                   <Link href={`/dashboard/products/${product.id}`}>
-                    <button className='pr-2.5 pt-[5px] text-[var(--text)] border-0 cursor-pointer bg-teal-300'>
+                    <button className='px-2.5 py-[5px] text-[var(--text)] border-0 cursor-pointer bg-teal-300'>
                       View
                     </button>
                   </Link>
                   <form action={deleteProduct}>
                       <input type="hidden" name="id" value={product.id} />
-                      <button className='pr-2.5 pt-[5px] text-[var(--text)] border-0 cursor-pointer bg-[#D0114F]'>
+                      <button className='px-2.5 py-[5px] text-[var(--text)] border-0 cursor-pointer bg-[#D0114F]'>
                         Delete
                       </button>
                     </form>
@@ -77,6 +76,7 @@ const ProductPage = async ({
         </tbody>
       </table>
       {/* <Pagination count={count} /> */}
+      <Pagination isDisabled={false}/>
     </div>
   );
 };
