@@ -28,7 +28,7 @@ const UsersPage = async ({ searchParams }: { searchParams: SearchParams }) => {
   return (
     <div className='bg-[var(--bgSoft)] p-5 rounded-large mt-5'>
       <div className='flex items-center justify-between'>
-        <Search placeholder="Search for a user..." />
+        <Search placeholder="Search for a product..." />
         <Link href="/dashboard/users/add">
           <button className='p-2.5 bg-[#5d57c9] text-[var(--text)] rounded-[5px] border-0 cursor-pointer'>Add New</button>
         </Link>
@@ -72,7 +72,7 @@ const UsersPage = async ({ searchParams }: { searchParams: SearchParams }) => {
                   </Link>
                   {/* <form action={deleteUser}>
                     <input type="hidden" name="id" value={(user.id)} />
-                    <button className={'pr-2.5 pt-[5px] text-[var(--text)] border-0 cursor-pointer bg-[#D0114F]'}>
+                    <button className='pr-2.5 pt-[5px] text-[var(--text)] border-0 cursor-pointer bg-[#D0114F]'>
                       Delete
                     </button>
                   </form> */}

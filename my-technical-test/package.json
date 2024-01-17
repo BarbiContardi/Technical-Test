@@ -9,12 +9,19 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@types/d3-shape": "^3.1.6",
+    "bcrypt": "^5.1.1",
+    "bcrypt-ts": "^5.0.1",
+    "d3-shape": "^3.2.0",
+    "d3-shape-tx": "^1.0.0",
     "mongoose": "^8.0.4",
     "next": "14.0.4",
+    "next-auth": "^4.24.5",
     "react": "^18",
     "react-dom": "^18",
     "react-icons": "^5.0.1",
-    "recharts": "^2.10.4"
+    "recharts": "^2.10.4",
+    "use-debounce": "^10.0.0"
   },
   "devDependencies": {
     "@types/mongoose": "^5.11.97",

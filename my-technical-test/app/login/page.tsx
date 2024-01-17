@@ -1,8 +1,11 @@
-import React from 'react'
+import LoginForm from '../ui/login/LoginForm';
 
-const Login = () => {
+const LoginPage = () => {
   return (
-    <div>Login</div>
-  )
-}
-export default Login;
+    <div className='w-full h-screen flex items-center justify-center'>
+      <LoginForm/>
+    </div>
+  );
+};
+
+export default LoginPage;
