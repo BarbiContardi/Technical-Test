@@ -7,9 +7,9 @@ import {cards} from '../lib/data'
 
 const Dashboard = () => {
   return (
-    <div className="flex gap-5 mt-5">
-      <div className="flex flex-[3] flex-col gap-5">
-        <div className="flex gap-5 justify-between">
+    <div className="flex flex-col md:flex-row gap-5 mt-5">
+      <div className="flex flex-col gap-5 md:flex-[3]">
+        <div className="flex flex-col md:flex-row gap-5 justify-between">
           {cards.map((item) => (
             <Card item={item} key={item.id} />
           ))}
@@ -17,10 +17,11 @@ const Dashboard = () => {
         <Transactions />
         <Chart />
       </div>
-      <div className="flex-[1]">
+      <div className="mt-5 md:mt-0 md:flex-[1]">
         <Rightbar />
       </div>
     </div>
   );
 };
 export default Dashboard;
+

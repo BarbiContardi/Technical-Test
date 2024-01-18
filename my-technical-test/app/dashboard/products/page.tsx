@@ -59,13 +59,13 @@ const ProductPage = async ({
               <td className='p-2.5'>
                 <div className='flex gap-2.5'>
                   <Link href={`/dashboard/products/${product.id}`}>
-                    <button className='px-2.5 py-[5px] text-[var(--text)] border-0 cursor-pointer bg-teal-300'>
+                    <button className='px-2.5 py-[5px] text-[var(--text)] rounded-[5px] cursor-pointer bg-teal-300'>
                       View
                     </button>
                   </Link>
                   <form action={deleteProduct}>
                       <input type="hidden" name="id" value={product.id} />
-                      <button className='px-2.5 py-[5px] text-[var(--text)] border-0 cursor-pointer bg-[#D0114F]'>
+                      <button className='px-2.5 py-[5px] text-[var(--text)] rounded-[5px] cursor-pointer bg-[#D0114F]'>
                         Delete
                       </button>
                     </form>

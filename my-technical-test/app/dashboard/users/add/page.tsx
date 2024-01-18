@@ -1,4 +1,4 @@
-import { addUser } from "@/app/lib/actions";
+import { addUser } from "../../../lib/actions";
 
 const AddUserPage = () => {
   return (

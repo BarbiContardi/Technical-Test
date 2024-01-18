@@ -3,7 +3,7 @@ import { MdPlayCircleFilled, MdReadMore } from "react-icons/md";
 
 const Rightbar = () => {
   return (
-    <div className="fixed">
+    <div className='sticky'>
       <div className="bg-[linear-gradient(to top, #182237, #253352)] px-6 py-5 rounded-large mb-5 relative">
         <div className="absolute right-0 bottom-0 w-2/4 h-3/6">
           <Image
