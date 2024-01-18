@@ -11,9 +11,9 @@ import {
   MdPeople,
   MdOutlineSettings,
   MdHelpCenter,
-  MdLogout,
+  // MdLogout,
 } from "react-icons/md";
-import { auth, signOut } from "@/app/auth";
+// import { signOut, auth } from '../../auth';
 
 const menuItems = [
   {
@@ -79,19 +79,19 @@ const menuItems = [
 ];
 
 const Sidebar = async () => {
-   const { user } = await auth();
+   //const { user } = await auth();
   return (
     <div className='sticky top-10'>
       <div className='flex items-center space-x-5 mb-5'>
         <Image
           className='rounded-full object-cover'
-          src={user.img || "/noavatar.png"}
+  src={/*user.img ||*/ "/noavatar.png"}
           alt={""}
           width={50}
           height={50}
         />
         <div className='flex flex-col'>
-          <span className='font-semibold'>{user.username}</span>
+          <span className='font-semibold'>Jonh{/*user.username*/}</span>
           <span className='text-xs text-[var(--textSoft)]'>Administrator</span>
         </div>
       </div>
@@ -105,7 +105,7 @@ const Sidebar = async () => {
           </li>
         ))}
       </ul>
-      <form
+      {/* <form
         action={async () => {
           "use server";
           await signOut();
@@ -115,7 +115,7 @@ const Sidebar = async () => {
           <MdLogout />
           Logout
         </button>
-      </form>
+      </form> */}
     </div>
   );
 };

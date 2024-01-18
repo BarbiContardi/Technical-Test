@@ -75,8 +75,7 @@ const ProductPage = async ({
           ))}
         </tbody>
       </table>
-      {/* <Pagination count={count} /> */}
-      <Pagination isDisabled={false}/>
+      <Pagination count={count} />
     </div>
   );
 };
