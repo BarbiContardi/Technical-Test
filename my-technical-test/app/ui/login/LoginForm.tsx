@@ -1,5 +1,4 @@
-"use client";
-
+"use client"
 import { authenticate } from "@/app/lib/actions";
 import { useFormState } from "react-dom";
 
