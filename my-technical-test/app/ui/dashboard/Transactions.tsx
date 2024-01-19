@@ -25,7 +25,7 @@ const Transactions = () => {
                   height={40}
                   className='object-cover rounded-full'
                 />
-                John Doe
+                Barbara
               </div>
             </td>
             <td className='p-2.5'>
@@ -46,7 +46,7 @@ const Transactions = () => {
                   height={40}
                   className='object-cover rounded-full'
                 />
-                John Doe
+                Yoel
               </div>
             </td>
             <td className='p-2.5'>
@@ -65,7 +65,7 @@ const Transactions = () => {
                   height={40}
                   className='object-cover rounded-full'
                 />
-                John Doe
+                Avril
               </div>
             </td>
             <td className='p-2.5'>
@@ -86,7 +86,7 @@ const Transactions = () => {
                   height={40}
                   className='object-cover rounded-full'
                 />
-                John Doe
+                Jose
               </div>
             </td>
             <td className='p-2.5'>

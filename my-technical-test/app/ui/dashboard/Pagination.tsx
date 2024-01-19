@@ -1,6 +1,7 @@
 "use client"
 import React, { FC } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import clsx from "clsx";
 
 interface PaginationProps {
   count: number;
@@ -29,14 +30,20 @@ const Pagination: FC<PaginationProps> = ({ count }) => {
   return (
     <div className='p-2.5 flex justify-between'>
       <button
-        className={`bg-white text-[var(--bg)] font-bold rounded-[5px] px-2.5 py-[5px] ${!hasPrev ? 'cursor-not-allowed' : 'cursor-pointer'}`}
+        className={clsx('bg-white text-[var(--bg)] font-bold rounded-[5px] px-2.5 py-[5px]', {
+          'cursor-pointer': hasPrev,
+          'cursor-not-allowed': !hasPrev
+        })}
         disabled={!hasPrev}
         onClick={() => handleChangePage("prev")}
       >
         Previous
       </button>
       <button
-        className={`bg-white text-[var(--bg)] font-bold rounded-[5px] px-2.5 py-[5px] ${!hasPrev ? 'cursor-not-allowed' : 'cursor-pointer'}`}
+        className={clsx('bg-white text-[var(--bg)] font-bold rounded-[5px] px-2.5 py-[5px]', {
+          'cursor-pointer': hasNext,
+          'cursor-not-allowed': !hasNext
+        })}
         disabled={!hasNext}
         onClick={() => handleChangePage("next")}
       >
