@@ -5,7 +5,8 @@ const Transactions = () => {
   return (
     <div className='bg-[var(--bgSoft)] p-5 rounded-large'>
       <h2 className='mb-5 text-[var(--textSoft)] font-extralight'>Latest Transactions</h2>
-      <table className='w-full'>
+      <div className="overflow-x-auto">
+      <table className='w-full text-sm md:text-base'>
         <thead>
           <tr>
             <td className='p-2.5'>Name</td>
@@ -99,6 +100,7 @@ const Transactions = () => {
           </tr>
         </tbody>
       </table>
+    </div>
     </div>
   );
 };
