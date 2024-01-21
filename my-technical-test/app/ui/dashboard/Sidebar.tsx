@@ -3,9 +3,14 @@ import MenuLink from "./MenuLink";
 import { auth, signOut } from "@/app/auth";
 import { MdLogout } from "react-icons/md";
 import { menuItems } from "@/app/lib/data";
+import React from "react";
+type User = {
+  username: string;
+  img: string | undefined;
+};
 
-const Sidebar = async () => {
-  const {user} = await auth();
+const Sidebar: React.FC = async () => {
+  const {user}: User = await auth();
 
   return (
     <div className="sticky top-10">
