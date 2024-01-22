@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   env: {
-    MONGO: "mongodb+srv://vercel-admin-user:foOzMOCq1MWHgcO8@cluster0.mcyiuhz.mongodb.net/?retryWrites=true&w=majority",
+    MONGO: "mongodb+srv://bardev33:7eSwqd3vWY7zw@cluster0.mcyiuhz.mongodb.net/?retryWrites=true&w=majority",
   },
   images: {
     remotePatterns: [
