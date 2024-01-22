@@ -1,14 +1,14 @@
 "use client"
 import React from 'react'
-import { useEffect } from 'react';
-import { useRouter } from 'next/navigation';
+// import { useEffect } from 'react';
+// import { useRouter } from 'next/navigation';
 
 function HomePage() {
-  const router = useRouter();
+  // const router = useRouter();
 
-  useEffect(() => {
-    router.push('/login');
-  }, [router]);
+  // useEffect(() => {
+  //   router.push('/login');
+  // }, [router]);
 
   return <div>Loading...</div>;
 }
