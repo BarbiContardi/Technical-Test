@@ -7,7 +7,7 @@ function HomePage() {
   const router = useRouter();
 
   useEffect(() => {
-    router.push('/dashboard');
+    router.push('/login');
   }, [router]);
 
   return <div>Loading...</div>;
