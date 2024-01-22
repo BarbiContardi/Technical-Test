@@ -40,6 +40,7 @@ export const { signIn, signOut, auth } = NextAuth({
       },
     }),
   ],
+  secret: process.env.AUTH_SECRET,
   // ADD ADDITIONAL INFORMATION TO SESSION
   callbacks: {
     async jwt({ token, user }) {

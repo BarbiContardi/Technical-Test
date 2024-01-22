@@ -1,11 +1,5 @@
-import { getProviders } from "next-auth/react";
 export const authConfig = {
-  providers:[
-    getProviders.GitHub({
-      clientId: process.env.GITHUB_ID,
-      clientSecret: process.env.GITHUB_SECRET
-    })
-  ],
+  providers:[],
   secret: process.env.AUTH_SECRET,
   pages: {
     signIn: "/login",

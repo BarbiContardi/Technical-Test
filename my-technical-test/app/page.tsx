@@ -1,9 +1,16 @@
+"use client"
 import React from 'react'
+import { useEffect } from 'react';
+import { useRouter } from 'next/router';
 
-const HomePage = () => {
-  return (
-    <div>HomePage</div>
-  )
+function HomePage() {
+  const router = useRouter();
+
+  useEffect(() => {
+    router.push('/dashboard');
+  }, [router]);
+
+  return <div>Loading...</div>;
 }
 
-export default HomePage
+export default HomePage;
