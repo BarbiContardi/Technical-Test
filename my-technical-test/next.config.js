@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   env: {
-    MONGO: "mongodb+srv://bardev33:7eSwqd3vWY7zw@cluster0.mcyiuhz.mongodb.net/?retryWrites=true&w=majority",
+    MONGODB_URI: "mongodb+srv://bardev33:7eSwqd3vWY7zw@cluster0.mcyiuhz.mongodb.net/?retryWrites=true&w=majority",
   },
   images: {
     remotePatterns: [

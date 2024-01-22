@@ -21,7 +21,8 @@
     "react-icons": "4.11.0",
     "recharts": "2.9.0",
     "socket.io": "^4.7.4",
-    "use-debounce": "9.0.4"
+    "use-debounce": "9.0.4",
+    "vercel": "^33.2.0"
   },
   "devDependencies": {
     "@types/mongoose": "^5.11.97",
