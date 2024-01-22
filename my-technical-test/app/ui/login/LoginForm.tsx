@@ -3,7 +3,7 @@ import { authenticate } from "@/app/lib/actions";
 import { useFormState } from "react-dom";
 
 const LoginForm = () => {
-  const [state, formAction] = useFormState(authenticate, "");
+  const [state, formAction] = useFormState(authenticate, "Wrong Credentials");
 
   return (
     <form action={formAction} className='bg-[var(--bgSoft)] p-[50px] rounded-large w-[500px] h-[500px] flex flex-col items-center justify-center gap-[30px]'>
