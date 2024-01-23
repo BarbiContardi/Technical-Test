@@ -3,27 +3,9 @@ import { fetchUser } from "@/app/lib/data";
 import Image from "next/image";
 import React from "react";
 
-interface User {
-  id: string;
-  img?: string;
-  username: string;
-  email: string;
-  password: string;
-  phone: string;
-  address: string;
-  isAdmin: boolean;
-  isActive: boolean;
-}
-
-interface SingleUserPageProps {
-  params: {
-    id: string;
-  };
-}
-
-const SingleUserPage: React.FC<SingleUserPageProps> = async ({ params }) => {
+const SingleUserPage = async ({ params }) => {
   const { id } = params;
-  const user: User = await fetchUser(id);
+  const user = await fetchUser(id);
 
   return (
     <div className="flex gap-[50px] mt-5">

@@ -1,13 +1,10 @@
 "use client";
-import React from 'react'
+import React from "react";
 import { MdSearch } from "react-icons/md";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useDebouncedCallback } from "use-debounce";
-interface SearchProps {
-  placeholder: string
-}
 
-const Search:React.FC<SearchProps> = ({ placeholder }) => {
+const Search = ({ placeholder }) => {
   const searchParams = useSearchParams();
   const { replace } = useRouter();
   const pathname = usePathname();
@@ -26,12 +23,12 @@ const Search:React.FC<SearchProps> = ({ placeholder }) => {
   }, 300);
 
   return (
-    <div className='flex items-center space-x-2.5 bg-[#2e374a] p-2.5 rounded-lg w-max'>
+    <div className="flex items-center space-x-2.5 bg-[#2e374a] p-2.5 rounded-lg w-max">
       <MdSearch />
       <input
         type="text"
         placeholder={placeholder}
-        className='bg-transparent border-0 text-[var(--text)] outline-none'
+        className="bg-transparent border-0 text-[var(--text)] outline-none"
         onChange={handleSearch}
       />
     </div>

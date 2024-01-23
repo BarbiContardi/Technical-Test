@@ -3,13 +3,7 @@ import { fetchProduct } from "@/app/lib/data";
 import Image from "next/image";
 import React from 'react'
 
-interface SingleUserPageProps {
-  params: {
-    id: string;
-  };
-}
-
-const SingleProductPage: React.FC<SingleUserPageProps> = async ({ params }) => {
+const SingleProductPage = async ({ params }) => {
   const { id } = params;
   const product = await fetchProduct(id);
 

@@ -1,26 +1,25 @@
 import Image from "next/image";
 import MenuLink from "./MenuLink";
-import { signOut } from "@/app/auth";
+import { auth, signOut } from "@/app/auth";
 import { MdLogout } from "react-icons/md";
 import { menuItems } from "@/app/lib/data";
 import React from "react";
 
-
-const Sidebar: React.FC = () => {
-  // const {user} = await auth();
+const Sidebar = async () => {
+  const { user } = await auth();
 
   return (
     <div className="sticky top-10">
       <div className="flex items-center space-x-5 mb-5">
         <Image
           className="rounded-full object-cover"
-          src={/*user.img ||*/ "/noavatar.png"}
+          src={user.img || "/noavatar.png"}
           alt={""}
           width={50}
           height={50}
         />
         <div className="flex flex-col">
-          <span className="font-semibold">{/*user.username*/}</span>
+          <span className="font-semibold">{user.username}</span>
           <span className="text-xs text-[var(--textSoft)]">Administrator</span>
         </div>
       </div>

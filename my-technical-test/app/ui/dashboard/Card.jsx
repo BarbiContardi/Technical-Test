@@ -1,15 +1,7 @@
-import { MdSupervisedUserCircle } from 'react-icons/md';
-import React from 'react';
+import { MdSupervisedUserCircle } from "react-icons/md";
+import React from "react";
 
-interface CardProps {
-  item: {
-    title: string;
-    number: number;
-    change: number;
-  };
-}
-
-const Card: React.FC<CardProps> = ({ item }) => {
+const Card = ({ item }) => {
   return (
     <div className="bg-[var(--bgSoft)] p-5 rounded-lg flex space-x-5 cursor-pointer w-full hover:bg-[#2e374a]">
       <MdSupervisedUserCircle size={24} />
@@ -17,9 +9,9 @@ const Card: React.FC<CardProps> = ({ item }) => {
         <span>{item.title}</span>
         <span className="text-4xl font-semibold">{item.number}</span>
         <span className="text-base font-light">
-          <span className={item.change > 0 ? 'text-lime-500' : 'text-red-500'}>
+          <span className={item.change > 0 ? "text-lime-500" : "text-red-500"}>
             {item.change}%
-          </span>{' '}
+          </span>{" "}
           {item.change > 0 ? "more" : "less"} than previous week
         </span>
       </div>
