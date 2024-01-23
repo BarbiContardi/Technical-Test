@@ -5,9 +5,8 @@ import { MdLogout } from "react-icons/md";
 import { menuItems } from "@/app/lib/data";
 import React from "react";
 
-const Sidebar = async () => {
+export default async function Sidebar() {
   const { user } = await auth();
-
   return (
     <div className="sticky top-10">
       <div className="flex items-center space-x-5 mb-5">
@@ -20,7 +19,7 @@ const Sidebar = async () => {
         />
         <div className="flex flex-col">
           <span className="font-semibold">{user.username}</span>
-          <span className="text-xs text-[var(--textSoft)]">Administrator</span>
+          <span className="text-xs text-[var(--textSoft)]">Admin</span>
         </div>
       </div>
       <ul className="list-none">
@@ -48,6 +47,5 @@ const Sidebar = async () => {
       </form>
     </div>
   );
-};
+}
 
-export default Sidebar;

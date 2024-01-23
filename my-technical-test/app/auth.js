@@ -5,7 +5,7 @@ import { connectToDB } from "./lib/utils";
 import { User } from "./lib/models";
 import bcrypt from "bcrypt";
 
-const login = async (credentials) => {
+export const login = async (credentials) => {
   try {
     connectToDB();
     const user = await User.findOne({ username: credentials.username });
@@ -40,20 +40,21 @@ export const { signIn, signOut, auth } = NextAuth({
       },
     }),
   ],
-  secret: process.env.NEXTAUTH_SECRET,
-  // ADD ADDITIONAL INFORMATION TO SESSION
   callbacks: {
     async jwt({ token, user }) {
       if (user) {
         token.username = user.username;
         token.img = user.img;
+        token.isAdmin = user.isAdmin;
       }
+      console.log(token)
       return token;
     },
     async session({ session, token }) {
       if (token) {
         session.user.username = token.username;
         session.user.img = token.img;
+        session.user.isAdmin = token.isAdmin;
       }
       return session;
     },

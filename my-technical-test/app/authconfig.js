@@ -1,5 +1,5 @@
 export const authConfig = {
-  providers:[],
+  providers: [],
   pages: {
     signIn: "/login",
   },
@@ -14,6 +14,7 @@ export const authConfig = {
         return Response.redirect(new URL("/dashboard", request.nextUrl));
       }
       return true;
+
     },
   },
 };
