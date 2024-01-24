@@ -5,7 +5,7 @@ import { connectToDB } from "./lib/utils";
 import { User } from "./lib/models";
 import bcrypt from "bcrypt";
 
-export const login = async (credentials) => {
+const login = async (credentials) => {
   try {
     connectToDB();
     const user = await User.findOne({ username: credentials.username });
@@ -35,7 +35,7 @@ export const { signIn, signOut, auth } = NextAuth({
           const user = await login(credentials);
           return user;
         } catch (err) {
-          return err;
+          return null;
         }
       },
     }),
@@ -45,18 +45,21 @@ export const { signIn, signOut, auth } = NextAuth({
       if (user) {
         token.username = user.username;
         token.img = user.img;
-        token.isAdmin = user.isAdmin;
       }
-      console.log(token)
       return token;
     },
     async session({ session, token }) {
       if (token) {
-        session.user.username = token.username;
-        session.user.img = token.img;
-        session.user.isAdmin = token.isAdmin;
+        session.user = {
+          username: token.username,
+          img: token.img,
+        };
       }
+      console.log(session.user)
       return session;
     },
   },
 });
+export const handler = NextAuth(authConfig);
+export { handler as GET, handler as POST };
+
