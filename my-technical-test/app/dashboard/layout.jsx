@@ -1,6 +1,6 @@
 import Navbar from "../ui/dashboard/navbar/navbar"
-import Sidebar from "@/app/ui/dashboard/sidebar/sidebar.jsx"
 import Footer from "../ui/dashboard/footer/footer"
+import Sidebar from "../ui/dashboard/sidebar/sidebar"
 
 const Layout = ({children}) => {
   return (
