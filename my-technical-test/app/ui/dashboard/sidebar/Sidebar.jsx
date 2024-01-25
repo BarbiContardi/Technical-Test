@@ -83,7 +83,7 @@ const Sidebar = async () => {
     <div className="sticky top-10">
     <div className="flex items-center space-x-5 mb-5">
       <Image
-        className="rounded-full object-cover"
+        className="rounded-[50%] object-cover"
         src={user.img || "/noavatar.png"}
         alt={""}
         width={50}
