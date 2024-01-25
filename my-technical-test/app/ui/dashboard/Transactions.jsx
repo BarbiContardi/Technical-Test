@@ -1,5 +1,4 @@
 import Image from "next/image";
-import React from "react";
 
 const Transactions = () => {
   return (
@@ -37,7 +36,7 @@ const Transactions = () => {
                 </span>
               </td>
               <td className="p-2.5">14.02.2024</td>
-              <td className="p-2.5">$3.200</td>
+              <td className="p-2.5">$4.600</td>
             </tr>
             <tr>
               <td className="p-2.5">
@@ -58,7 +57,7 @@ const Transactions = () => {
                 </span>
               </td>
               <td className="p-2.5">14.02.2024</td>
-              <td className="p-2.5">$3.200</td>
+              <td className="p-2.5">$1.500</td>
             </tr>
             <tr>
               <td className="p-2.5">
@@ -79,7 +78,7 @@ const Transactions = () => {
                 </span>
               </td>
               <td className="p-2.5">14.02.2024</td>
-              <td className="p-2.5">$3.200</td>
+              <td className="p-2.5">$2.800</td>
             </tr>
             <tr>
               <td className="p-2.5">
@@ -100,7 +99,7 @@ const Transactions = () => {
                 </span>
               </td>
               <td className="p-2.5">14.02.2024</td>
-              <td className="p-2.5">$3.200</td>
+              <td className="p-2.5">$3.100</td>
             </tr>
           </tbody>
         </table>

@@ -1,5 +1,4 @@
 import { MdSupervisedUserCircle } from "react-icons/md";
-import React from "react";
 
 const Card = ({ item }) => {
   return (

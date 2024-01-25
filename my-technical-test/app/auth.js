@@ -40,6 +40,7 @@ export const { signIn, signOut, auth } = NextAuth({
       },
     }),
   ],
+  // ADD ADDITIONAL INFORMATION TO SESSION
   callbacks: {
     async jwt({ token, user }) {
       if (user) {
@@ -50,16 +51,10 @@ export const { signIn, signOut, auth } = NextAuth({
     },
     async session({ session, token }) {
       if (token) {
-        session.user = {
-          username: token.username,
-          img: token.img,
-        };
+        session.user.username = token.username;
+        session.user.img = token.img;
       }
-      console.log(session.user)
       return session;
     },
   },
 });
-export const handler = NextAuth(authConfig);
-export { handler as GET, handler as POST };
-

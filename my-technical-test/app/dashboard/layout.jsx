@@ -1,4 +1,4 @@
-import Sidebar from "../ui/dashboard/Sidebar";
+import Sidebar from "../ui/dashboard/sidebar/Sidebar";
 import Navbar from "../ui/dashboard/Navbar";
 import Footer from "../ui/dashboard/Footer";
 import React from "react";

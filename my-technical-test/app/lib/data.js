@@ -1,16 +1,5 @@
 import { Product, User } from "./models";
 import { connectToDB } from "./utils";
-import {
-  MdDashboard,
-  MdSupervisedUserCircle,
-  MdShoppingBag,
-  MdAttachMoney,
-  MdWork,
-  MdAnalytics,
-  MdPeople,
-  MdOutlineSettings,
-  MdHelpCenter,
-} from "react-icons/md";
 
 export const fetchUsers = async (q, page) => {
   const regex = new RegExp(q, "i");
@@ -31,7 +20,7 @@ export const fetchUsers = async (q, page) => {
 };
 
 export const fetchUser = async (id) => {
-  console.log(id);
+  console.log(id)
   try {
     connectToDB();
     const user = await User.findById(id);
@@ -92,67 +81,5 @@ export const cards = [
     title: "Revenue",
     number: 6.642,
     change: 18,
-  },
-];
-export const menuItems = [
-  {
-    title: "Pages",
-    list: [
-      {
-        title: "Dashboard",
-        path: "/dashboard",
-        icon: <MdDashboard />,
-      },
-      {
-        title: "Users",
-        path: "/dashboard/users",
-        icon: <MdSupervisedUserCircle />,
-      },
-      {
-        title: "Products",
-        path: "/dashboard/products",
-        icon: <MdShoppingBag />,
-      },
-      {
-        title: "Transactions",
-        path: "/dashboard/transactions",
-        icon: <MdAttachMoney />,
-      },
-    ],
-  },
-  {
-    title: "Analytics",
-    list: [
-      {
-        title: "Revenue",
-        path: "/dashboard/revenue",
-        icon: <MdWork />,
-      },
-      {
-        title: "Reports",
-        path: "/dashboard/reports",
-        icon: <MdAnalytics />,
-      },
-      {
-        title: "Teams",
-        path: "/dashboard/teams",
-        icon: <MdPeople />,
-      },
-    ],
-  },
-  {
-    title: "User",
-    list: [
-      {
-        title: "Settings",
-        path: "/dashboard/settings",
-        icon: <MdOutlineSettings />,
-      },
-      {
-        title: "Help",
-        path: "/dashboard/help",
-        icon: <MdHelpCenter />,
-      },
-    ],
   },
 ];
