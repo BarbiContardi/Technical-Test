@@ -1,14 +1,9 @@
-import { useRouter } from "next/navigation";
-import { useEffect } from "react";
+import LoginPage from "./login/page";
 
 const Homepage = () => {
-  const router = useRouter();
+  return <div>
+    <LoginPage/>
+  </div>
+};
 
-  useEffect(() => {
-    router.push('/login');
-  }, [router]);
-
-  return <div>Loading...</div>;
-}
-
-export default Homepage
+export default Homepage;
