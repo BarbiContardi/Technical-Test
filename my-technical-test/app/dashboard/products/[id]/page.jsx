@@ -1,7 +1,6 @@
 import { updateProduct } from "@/app/lib/actions";
 import { fetchProduct } from "@/app/lib/data";
 import Image from "next/image";
-import React from 'react'
 
 const SingleProductPage = async ({ params }) => {
   const { id } = params;

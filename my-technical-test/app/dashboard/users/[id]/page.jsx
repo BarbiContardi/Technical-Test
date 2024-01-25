@@ -1,7 +1,6 @@
 import { updateUser } from "@/app/lib/actions";
 import { fetchUser } from "@/app/lib/data";
 import Image from "next/image";
-import React from "react";
 
 const SingleUserPage = async ({ params }) => {
   const { id } = params;

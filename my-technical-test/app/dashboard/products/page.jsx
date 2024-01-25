@@ -1,11 +1,11 @@
-import Search from "@/app/ui/dashboard/Search";
 import Image from "next/image";
 import Link from "next/link";
+import Search from "@/app/ui/dashboard/search/search";
+import Pagination from "@/app/ui/dashboard/pagination/pagination";
 import { fetchProducts } from "@/app/lib/data";
 import { deleteProduct } from "@/app/lib/actions";
-import Pagination from "@/app/ui/dashboard/Pagination";
 
-const ProductPage = async ({ searchParams }) => {
+const ProductsPage = async ({ searchParams }) => {
   const q = searchParams?.q || "";
   const page = searchParams?.page || 1;
   const { count, products } = await fetchProducts(q, page);
@@ -75,4 +75,5 @@ const ProductPage = async ({ searchParams }) => {
     </div>
   );
 };
-export default ProductPage;
+
+export default ProductsPage;

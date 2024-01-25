@@ -1,4 +1,5 @@
 "use client";
+
 import { MdSearch } from "react-icons/md";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useDebouncedCallback } from "use-debounce";
@@ -23,14 +24,14 @@ const Search = ({ placeholder }) => {
 
   return (
     <div className="flex items-center space-x-2.5 bg-[#2e374a] p-2.5 rounded-lg w-max">
-      <MdSearch />
-      <input
-        type="text"
-        placeholder={placeholder}
-        className="bg-transparent border-0 text-[var(--text)] outline-none"
-        onChange={handleSearch}
-      />
-    </div>
+    <MdSearch />
+    <input
+      type="text"
+      placeholder={placeholder}
+      className="bg-transparent border-0 text-[var(--text)] outline-none"
+      onChange={handleSearch}
+    />
+  </div>
   );
 };
 

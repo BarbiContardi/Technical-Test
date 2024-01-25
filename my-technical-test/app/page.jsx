@@ -1,9 +1,7 @@
-"use client"
-import React from 'react'
-import { useEffect } from 'react';
-import { useRouter } from 'next/navigation';
+import { useRouter } from "next/navigation";
+import { useEffect } from "react";
 
-function HomePage() {
+const Homepage = () => {
   const router = useRouter();
 
   useEffect(() => {
@@ -13,4 +11,4 @@ function HomePage() {
   return <div>Loading...</div>;
 }
 
-export default HomePage;
+export default Homepage

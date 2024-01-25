@@ -1,4 +1,5 @@
-"use server"
+"use server";
+
 import { revalidatePath } from "next/cache";
 import { Product, User } from "./models";
 import { connectToDB } from "./utils";
