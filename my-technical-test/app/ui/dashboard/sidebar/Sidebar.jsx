@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import MenuLink from "./menuLink/menuLink";
 import {
   MdDashboard,
@@ -13,6 +12,9 @@ import {
   MdLogout,
 } from "react-icons/md";
 import { auth, signOut } from "@/app/auth";
+import dynamic from 'next/dynamic';
+
+const Image = dynamic(() => import('next/image'));
 
 const menuItems = [
   {
