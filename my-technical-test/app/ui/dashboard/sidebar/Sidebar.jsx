@@ -1,4 +1,4 @@
-import MenuLink from "./menuLink/menuLink";
+import MenuLink from "./menuLink/MenuLink";
 import {
   MdDashboard,
   MdSupervisedUserCircle,

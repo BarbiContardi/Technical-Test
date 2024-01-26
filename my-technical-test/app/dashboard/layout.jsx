@@ -1,8 +1,8 @@
 import dynamic from 'next/dynamic';
 
-const Sidebar = dynamic(() => import('../ui/dashboard/sidebar/sidebar'));
-const Navbar = dynamic(() => import('../ui/dashboard/navbar/navbar'));
-const Footer = dynamic(() => import('../ui/dashboard/footer/footer'));
+const Sidebar = dynamic(() => import('../ui/dashboard/sidebar/Sidebar'));
+const Navbar = dynamic(() => import('../ui/dashboard/navbar/Navbar'));
+const Footer = dynamic(() => import('../ui/dashboard/footer/Footer'));
 
 const Layout = ({ children }) => {
   return (

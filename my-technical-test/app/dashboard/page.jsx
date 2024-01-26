@@ -1,10 +1,10 @@
 import { cards } from "../lib/data";
-import Card from "../ui/dashboard/card/card";
+import Card from "../ui/dashboard/card/Card";
 import dynamic from 'next/dynamic';
 
-const Rightbar = dynamic(() => import('../ui/dashboard/rightbar/rightbar'));
-const Transactions = dynamic(() => import('../ui/dashboard/transactions/transactions'));
-const Chart= dynamic(() => import('../ui/dashboard/chart/chart'));
+const Rightbar = dynamic(() => import('../ui/dashboard/rightbar/Rightbar'));
+const Transactions = dynamic(() => import('../ui/dashboard/transactions/Transactions'));
+const Chart= dynamic(() => import('../ui/dashboard/chart/Chart'));
 
 const Dashboard = () => {
   return (
