@@ -11,7 +11,7 @@ import {
   MdHelpCenter,
   MdLogout,
 } from "react-icons/md";
-import { auth, signOut } from "@/app/auth";
+import { signOut } from "@/app/auth";
 import dynamic from 'next/dynamic';
 
 const Image = dynamic(() => import('next/image'));
@@ -79,8 +79,7 @@ const menuItems = [
   },
 ];
 
-const Sidebar = async () => {
-  const { user } = await auth();
+const Sidebar = ({user}) => {
   return (
     <div className="sticky top-10">
     <div className="flex items-center space-x-5 mb-5">
