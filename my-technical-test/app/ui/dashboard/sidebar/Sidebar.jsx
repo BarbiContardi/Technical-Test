@@ -89,6 +89,7 @@ const Sidebar = ({user}) => {
         alt={""}
         width={50}
         height={50}
+        style={{ width: "50px", height:"50px"}}
       />
       <div className="flex flex-col">
         <span className="font-semibold">{user.username}</span>

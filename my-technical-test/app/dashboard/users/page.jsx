@@ -42,6 +42,7 @@ const UsersPage = async ({ searchParams }) => {
                   width={40}
                   height={40}
                   className="object-cover rounded-full"
+                  style={{ width: "40px", height:"40px"}}
                 />
                 {user.username}
               </div>
