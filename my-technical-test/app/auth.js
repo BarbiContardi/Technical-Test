@@ -22,7 +22,7 @@ const login = async (credentials) => {
     return user;
   } catch (err) {
     console.log(err);
-    throw new Error("Failed to login!", err);
+    throw new Error("Failed to login!");
   }
 };
 
