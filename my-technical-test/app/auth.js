@@ -28,7 +28,6 @@ const login = async (credentials) => {
 
 export const { signIn, signOut, auth } = NextAuth({
   ...authConfig,
-  secret: process.env.NEXTAUTH_SECRET,
   providers: [
     CredentialsProvider({
       async authorize(credentials) {
