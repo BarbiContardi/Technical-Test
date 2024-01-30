@@ -11,12 +11,12 @@ const Navbar = () => {
   const pathname = usePathname();
 
   return (
-    <div className="p-5 rounded-lg bg-[var(--bgSoft)] flex items-center justify-between">
-      <div className="text-[var(--textSoft)] font-bold capitalize">
+    <div className="p-5 rounded-lg bg-[var(--bgSoft)] flex flex-col md:flex-row items-center justify-between">
+      <div className="text-[var(--textSoft)] font-bold capitalize mb-5 md:mb-0 md:mr-5">
         {pathname.split("/").pop()}
       </div>
-      <div className="flex items-center gap-5">
-        <div className="flex items-center space-x-2.5 bg-[#2e374a] p-2.5 rounded-lg w-max">
+      <div className="flex flex-col items-center gap-5 sm:flex-row sm:items-center sm:gap-5">
+        <div className="flex items-center space-x-2.5 bg-[#2e374a] p-2.5 rounded-lg w-full md:w-max">
           <MdSearch />
           <input
             type="text"

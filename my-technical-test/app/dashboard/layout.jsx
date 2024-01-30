@@ -9,7 +9,7 @@ const Layout = async ({ children }) => {
   const {user} = await auth()
   return (
     <div className="flex flex-col md:flex-row">
-      <div className="w-full md:w-1/4 bg-[var(--bgSoft)] p-5 min-h-screen">
+      <div className="w-full md:w-1/4 bg-[var(--bgSoft)] p-5 h-auto md:h-auto">
         <Sidebar user={user}/>
       </div>
       <div className="w-full md:w-3/4 p-5">

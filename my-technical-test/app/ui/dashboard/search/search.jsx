@@ -23,12 +23,12 @@ const Search = ({ placeholder }) => {
   }, 300);
 
   return (
-    <div className="flex items-center space-x-2.5 bg-[#2e374a] p-2.5 rounded-lg w-max">
+    <div className="flex items-center space-x-2.5 bg-[#2e374a] p-2.5 rounded-lg w-full md:w-max">
     <MdSearch />
     <input
       type="text"
       placeholder={placeholder}
-      className="bg-transparent border-0 text-[var(--text)] outline-none"
+      className="bg-transparent border-0 text-[var(--text)] outline-none w-full"
       onChange={handleSearch}
     />
   </div>
