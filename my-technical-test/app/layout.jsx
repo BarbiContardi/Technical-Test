@@ -5,8 +5,8 @@ import { Providers } from "./provider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Technical Test",
-  description: "React - Next.js - Tailwind Css",
+  title: "Admin Dashboard",
+  description: "React - Next.js - Tailwind Css - MongoDB",
 };
 
 export default function RootLayout({ children }) {
