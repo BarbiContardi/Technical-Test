@@ -27,7 +27,7 @@ const Pagination = ({ count }) => {
     <div className="p-2.5 flex justify-between">
     <button
       className={clsx(
-        "bg-white text-[var(--bg)] font-bold rounded-[5px] px-2.5 py-[5px]",
+        "bg-[var(--bgPagination)] text-[var(--bg)]  font-bold rounded-[5px] px-2.5 py-[5px]",
         {
           "cursor-pointer": hasPrev,
           "cursor-not-allowed": !hasPrev,
@@ -40,7 +40,7 @@ const Pagination = ({ count }) => {
     </button>
     <button
       className={clsx(
-        "bg-white text-[var(--bg)] font-bold rounded-[5px] px-2.5 py-[5px]",
+        "bg-[var(--bgPagination)] text-[var(--bg)] font-bold rounded-[5px] px-2.5 py-[5px]",
         {
           "cursor-pointer": hasNext,
           "cursor-not-allowed": !hasNext,

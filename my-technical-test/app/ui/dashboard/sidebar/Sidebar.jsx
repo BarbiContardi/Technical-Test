@@ -29,7 +29,7 @@ const Sidebar = ({ user }) => {
           await signOut();
         }}
       >
-        <button className="p-5 my-1 flex items-center space-x-2.5 cursor-pointer rounded-lg bg-transparent border-none text-white w-full hover:bg-[#2e374a]">
+        <button className="p-5 my-1 flex items-center space-x-2.5 cursor-pointer rounded-lg bg-transparent border-none text-[var(--text)] w-full hover:bg-[var(--hoverBg)]">
           <MdLogout />
           Logout
         </button>

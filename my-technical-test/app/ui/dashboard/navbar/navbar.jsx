@@ -1,11 +1,7 @@
 "use client";
 import { usePathname } from "next/navigation";
-import {
-  MdNotifications,
-  MdOutlineChat,
-  MdPublic,
-  MdSearch,
-} from "react-icons/md";
+import { MdNotifications, MdOutlineChat, MdPublic } from "react-icons/md";
+import Search from "../search/search";
 
 const Navbar = () => {
   const pathname = usePathname();
@@ -16,14 +12,7 @@ const Navbar = () => {
         {pathname.split("/").pop()}
       </div>
       <div className="flex flex-col items-center gap-5 sm:flex-row sm:items-center sm:gap-5">
-        <div className="flex items-center space-x-2.5 bg-[#2e374a] p-2.5 rounded-lg w-full md:w-max">
-          <MdSearch />
-          <input
-            type="text"
-            placeholder="Search..."
-            className="bg-transparent border-0 text-[var(--text)]"
-          />
-        </div>
+        <Search placeholder="Search..." />
         <div className="flex gap-5">
           <MdOutlineChat size={20} />
           <MdNotifications size={20} />

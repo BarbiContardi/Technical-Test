@@ -10,8 +10,8 @@ const MenuLink = ({item}) => {
 
   return (
     <Link href={item.path} className={clsx(
-      'p-5 flex items-center space-x-2.5 my-1.5 rounded-lg hover:bg-[#2e374a] active:bg-[#2e374a]',
-      { 'bg-[#2e374a]': pathname === item.path }
+      'p-5 flex items-center space-x-2.5 my-1.5 rounded-lg hover:bg-[var(--hoverBg)] active:bg-[var(--hoverBg)]',
+      { 'bg-[var(--hoverBg)]': pathname === item.path }
     )}>
       {item.icon}
       {item.title}

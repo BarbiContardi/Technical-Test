@@ -23,7 +23,7 @@ const Search = ({ placeholder }) => {
   }, 300);
 
   return (
-    <div className="flex items-center space-x-2.5 bg-[#2e374a] p-2.5 rounded-lg w-full md:w-max">
+    <div className="flex items-center space-x-2.5 bg-[var(--hoverBg)] p-2.5 rounded-lg w-full md:w-max">
     <MdSearch />
     <input
       type="text"

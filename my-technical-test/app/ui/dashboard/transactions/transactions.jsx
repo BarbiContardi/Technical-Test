@@ -31,7 +31,7 @@ const Transactions = () => {
                 </div>
               </td>
               <td className="p-2.5">
-                <span className="rounded-sm p-[5px] text-sm text-white bg-[#f7cb7375]">
+                <span className="rounded-sm p-[5px] text-sm text-[var(--text)] bg-[#f7cb7375]">
                   Pending
                 </span>
               </td>
@@ -52,7 +52,7 @@ const Transactions = () => {
                 </div>
               </td>
               <td className="p-2.5">
-                <span className="rounded-sm p-[5px] text-sm text-white bg-[#afd6ee75]">
+                <span className="rounded-sm p-[5px] text-sm text-[var(--text)] bg-[#afd6ee75]">
                   Done
                 </span>
               </td>
@@ -73,7 +73,7 @@ const Transactions = () => {
                 </div>
               </td>
               <td className="p-2.5">
-                <span className="rounded-sm p-[5px] text-sm text-white bg-[#f7737375]">
+                <span className="rounded-sm p-[5px] text-sm text-[var(--text)] bg-[#f7737375]">
                   Cancelled
                 </span>
               </td>
@@ -94,7 +94,7 @@ const Transactions = () => {
                 </div>
               </td>
               <td className="p-2.5">
-                <span className="rounded-sm p-[5px] text-sm text-white bg-[#f7cb7375]">
+                <span className="rounded-sm p-[5px] text-sm text-[var(--text)] bg-[#f7cb7375]">
                   Pending
                 </span>
               </td>
