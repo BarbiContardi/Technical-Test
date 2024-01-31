@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Switch } from "@nextui-org/react";
-import { MoonIcon } from "./MoonIcon";
-import { SunIcon } from "./SunIcon";
 import { useTheme } from "next-themes";
+import { MoonIcon } from "./moonIcon";
+import { SunIcon } from "./sunIcon";
 
 export default function Switcher() {
   const [mounted, setMounted] = useState(false);
